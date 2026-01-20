@@ -65,8 +65,6 @@ class MainWindow(tk.Tk):
         self.canvas.itemconfig(self.frontTextId, text=self.currentCard.front)
         self.canvas.itemconfig(self.backTextId, text=frontText)
         self.canvas.itemconfig(self.canvasImage, image=self.cardFrontImage)
-        #self.wrongButton.config(state='disabled')
-        #self.rightButton.config(state='disabled')
         self.wrongButton.grid_forget()
         self.rightButton.grid_forget()
         self.after(4000, self.showBack)
@@ -77,8 +75,6 @@ class MainWindow(tk.Tk):
         backText = f"\n\nAtomic Number: {backFirst}\n\nName: {backNext}"
         self.canvas.itemconfig(self.backTextId, text=backText)
         self.canvas.itemconfig(self.canvasImage, image=self.cardBackImage)
-        #self.wrongButton.config(state='normal')
-        #self.rightButton.config(state='normal')
         self.wrongButton.grid(row=1, column=0)
         self.rightButton.grid(row=1, column=1)
 
