@@ -1,0 +1,67 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.whl
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environment
+venv/
+.venv/
+*/venv/
+
+# IDE specific files
+.vscode/
+.idea/
+.project
+.settings
+.vs/
+*.sublime-project
+*.sublime-workspace
+
+# Operating System Files
+.env
+.env.*
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Test and coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+
+# Misc
+*.log
+*.sqlite3
+*.db
+instance/
+node_modules/
+dist/
