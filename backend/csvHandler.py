@@ -13,8 +13,7 @@ def loadFlashcards(filename: str) -> List[Flashcard]:
                 front=row['Front'],
                 back=row['Back'],
                 box=int(row['Box']),
-                nextReviewDate=datetime.strptime(
-                    row['NextReviewDate'], '%Y-%m-%d').date()
+                #nextReviewDate=datetime.strptime(row['NextReviewDate'], '%Y-%m-%d').date()
             ))
     return flashcards
 
@@ -29,5 +28,5 @@ def saveFlashcards(flashcards: List[Flashcard], filename: str) -> None:
                 'Front': card.front,
                 'Back': card.back,
                 'Box': card.box,
-                'NextReviewDate': card.nextReviewDate.strftime('%Y-%m-%d')
+                #'NextReviewDate': card.nextReviewDate.strftime('%Y-%m-%d')
             })

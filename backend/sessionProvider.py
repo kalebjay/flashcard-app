@@ -13,16 +13,14 @@ class SessionProvider:
         self.attemptTracker: Dict[Flashcard, int] = {}
 
     def getCardsForReview(self) -> List[Flashcard]:
-        tempListCards = [card for card in self.flashcards if card.nextReviewDate <=
-                datetime.now().date()]
+        tempListCards = [card for card in self.flashcards if card.nextReviewDate <= datetime.now().date()]
         random.shuffle(tempListCards)
         return tempListCards
 
     def startSession(self) -> Iterable[Flashcard]:
         while self.reviewQueue:
             currentCard = self.reviewQueue.popleft()
-            self.attemptTracker[currentCard] = self.attemptTracker.get(
-                currentCard, 0) + 1
+            self.attemptTracker[currentCard] = self.attemptTracker.get(currentCard, 0) + 1
             yield currentCard
 
     def processResponse(self, card: Flashcard, response: str) -> None:
